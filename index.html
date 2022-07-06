@@ -1,87 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is a practice project for an office design agency using one of the templates of Nice Page taken as a prototype.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <article>
+      <div class="block-background"></div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+      <!-- Block heading and mode change control -->
+      <div class="block-header">
+        <div class="heading">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
 
-  Dark Mode
+        <hr>
 
-  
+        <div class="style-mode">
+          <input type="checkbox" name="theme-mode" id="theme-mode" class="toggle-switch">
+          <label for="theme-mode">Dark Mode</label>
+        </div>
+      </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+      <!-- Social media card wrapper -->
+      <div class="social-wr">
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+        <!-- Social media card component -->
+        <div class="social-card">
+          <div class="social-card-container">
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+            <div class="profile">
+              <div class="img-wrapper">
+                <img src="images/icon-facebook.svg" alt="Facebook Icon">
+              </div>
+              <h3>@nathanf</h3>
+            </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+            <span class="followers">1987</span><br>
 
+            <span class="followers-label">Followers</span><br>
 
+            <span class="days">12 Today</span>
+          </div>
+        </div>
 
-  Overview - Today
+        <!-- Social media card component -->
+        <div class="social-card">
+          <div class="social-card-container">
 
-  Page Views
-  87
-  3%
+            <div class="profile">
+              <div class="img-wrapper">
+                <img src="images/icon-twitter.svg" alt="Twitter Icon">
+              </div>
+              <h3>@nathanf</h3>
+            </div>
 
-  Likes
-  52
-  2%
+            <span class="followers">1044</span><br>
 
-  Likes
-  5462
-  2257%
+            <span class="followers-label">Followers</span><br>
 
-  Profile Views
-  52k
-  1375%
+            <span class="days">99 Today</span>
+          </div>
+        </div>
 
-  Retweets
-  117
-  303%
+        <!-- Social media card component -->
+        <div class="social-card">
+          <div class="social-card-container">
 
-  Likes
-  507
-  553%
+            <div class="profile">
+              <div class="img-wrapper">
+                <img src="images/icon-instagram.svg" alt="Instagram Icon">
+              </div>
+              <h3>@realnathanf</h3>
+            </div>
 
-  Likes
-  107
-  19%
+            <span class="followers">11k</span><br>
 
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <span class="followers-label">Followers</span><br>
+
+            <span class="days">1099 Today</span>
+          </div>
+        </div>
+
+        <!-- Social media card component -->
+        <div class="social-card">
+          <div class="social-card-container">
+
+            <div class="profile">
+              <div class="img-wrapper">
+                <img src="images/icon-youtube.svg" alt="Youtube Icon">
+              </div>
+              <h3>Nathan F.</h3>
+            </div>
+
+            <span class="followers">8239</span><br>
+
+            <span class="followers-label">Subscribers</span><br>
+
+            <span class="days">144 Today</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- || Section overview -->
+      <section class="sec-overview">
+        <h2>Overview - Today</h2>
+
+        <!-- Overview card container -->
+        <div class="overview-card-wr">
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Page Views</span>
+            <div class="img-wrapper">
+              <img src="images/icon-facebook.svg" alt="Facebook Icon">
+            </div>
+            <span class="count">87</span>
+            <span class="change">3%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Likes</span>
+            <div class="img-wrapper">
+              <img src="images/icon-facebook.svg" alt="Facebook Icon">
+            </div>
+            <span class="count">52</span>
+            <span class="change">2%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Likes</span>
+            <div class="img-wrapper">
+              <img src="images/icon-instagram.svg" alt="Instagram Icon">
+            </div>
+            <span class="count">5462</span>
+            <span class="change">2257%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Profile Views</span>
+            <div class="img-wrapper">
+              <img src="images/icon-instagram.svg" alt="Instagram Icon">
+            </div>
+            <span class="count">52k</span>
+            <span class="change">1375%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Retweets</span>
+            <div class="img-wrapper">
+              <img src="images/icon-twitter.svg" alt="Twitter Icon">
+            </div>
+            <span class="count">117</span>
+            <span class="change">303%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Likes</span>
+            <div class="img-wrapper">
+              <img src="images/icon-twitter.svg" alt="Twitter Icon">
+            </div>
+            <span class="count">507</span>
+            <span class="change">553%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Likes</span>
+            <div class="img-wrapper">
+              <img src="images/icon-youtube.svg" alt="Youtube Icon">
+            </div>
+            <span class="count">107</span>
+            <span class="change">19%</span>
+          </div>
+
+          <!-- overview card item -->
+          <div class="overview-card">
+            <span class="name">Total Views</span>
+            <div class="img-wrapper">
+              <img src="images/icon-youtube.svg" alt="Youtube Icon">
+            </div>
+            <span class="count">1407</span>
+            <span class="change">12%</span>
+          </div>
+
+        </div>
+
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Remove: Validate HTML structure -->
+  <!-- Remove: read blog about theme change after html complete -->
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+  </footer>
+
 </body>
+
 </html>
