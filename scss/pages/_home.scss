@@ -1,3 +1,113 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+   || Pages - Home
+   ========================================================================== */
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mx;
+
+$card-min-width: 256px;
+
+.block-background {
+	background-color: var.$bc-secondary;
+	height: 235px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		height: 245px;
+	}
+}
+
+.block-header {
+	/**
+		* Background pattern height minus to reduce the space which taken by 
+		* pattern.
+		*/
+	margin-top: -235px;
+	padding-top: 37px;
+
+	@media screen and (min-width: var.$tablet-view) {
+		@include mx.flex-vc-hsb;
+		margin-top: -245px;
+	}
+
+	.heading {
+		margin: 0;
+	}
+
+	.tag {
+		margin-bottom: 0;
+		margin-top: 0.4em;
+	}
+
+	hr {
+		margin: 24px 0 14px;
+
+		@media screen and (min-width: var.$tablet-view) {
+			display: none;
+		}
+	}
+
+	.theme-mode-label {
+		display: inline-block;
+		margin-right: 12px;
+	}
+}
+
+.social-wr {
+	display: flex;
+	gap: 24px 30px;
+	flex-direction: column;
+	margin-top: 40px;
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		flex-flow: row wrap;
+		margin-top: 46px;
+	}
+
+	.social-card {
+		@media screen and (min-width: var.$mobile-view-landscape) {
+			min-width: $card-min-width;
+		}
+	}
+
+	svg {
+		position: relative;
+		top: -2px;
+	}
+}
+
+.sec-overview {
+	margin-top: 48px;
+	margin-bottom: 46px;
+
+	.heading {
+		margin: 0;
+	}
+
+	.overview-card-wr {
+		display: flex;
+		flex-direction: column;
+		gap: 16px 30px;
+		margin-top: 28px;
+
+		@media screen and (min-width: var.$mobile-view-landscape) {
+			flex-flow: row wrap;
+		}
+
+		@media screen and (min-width: var.$tablet-view) {
+			margin-top: 24px;
+			gap: 24px 30px;
+		}
+	}
+
+	.overview-card {
+		@media screen and (min-width: var.$mobile-view-landscape) {
+			min-width: $card-min-width;
+		}
+	}
+
+	svg {
+		position: relative;
+		top: -2px;
+	}
+}

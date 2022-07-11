@@ -1,12 +1,15 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+   || Base - Base
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mx;
 
 /**
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /**
@@ -18,18 +21,34 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var.$bc-primary;
+}
+
+.h-centered {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /**
- * Basic styles for links
- */
-a {
-  color: $brand-color;
-  text-decoration: none;
+* Vertically and horizontally center element
+*/
+.flex-vh-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
+/**
+ * Vertically center(vc) and horizontally space between(hsb)
+ */
+.flex-vc-hsb {
+	@include mx.flex-vc-hsb;
+}
+
+.block-element {
+	display: block;
 }

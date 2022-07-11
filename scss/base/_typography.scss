@@ -1,7 +1,87 @@
-/**
- * Basic typography style for copy text
- */
+/* -----------------------------------------------------------------------------
+   || Base - Typography
+   ========================================================================== */
+@use '../abstracts/variables' as var;
+
 body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+	font-family: 'Inter', sans-serif;
+	font-size: 10px
+}
+
+h1,
+h2 {
+	font-size: 1.5rem;
+}
+
+h1 {
+	@media screen and (min-width: var.$tablet-view) {
+		font-size: 1.7rem;
+	}
+}
+
+h1,
+.social-card .followers,
+.overview-card .count {
+	font-weight: 700;
+	color: var.$c-primary;
+}
+
+h2,
+h3,
+.tag,
+.theme-mode,
+.overview-card .name {
+	font-weight: 700;
+	color: var.$c-secondary;
+}
+
+h3,
+.tag,
+.theme-mode,
+.social-card .days,
+.overview-card .name,
+.overview-card .change {
+	font-size: 0.875rem;
+}
+
+.social-card .followers {
+	font-size: 3.5rem;
+}
+
+.social-card .followers-label,
+.attribution {
+	font-weight: 400;
+	font-size: 0.75rem;
+	color: var.$c-secondary;
+}
+
+.social-card .followers-label {
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.social-card .days,
+.overview-card .change {
+	font-size: 0.75rem;
+	font-weight: 700;
+}
+
+.social-card .days.up,
+.overview-card .change.up {
+	color: var.$c-neutral;
+}
+
+.overview-card .count {
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.social-card .days.down,
+.overview-card .change.down {
+	color: var.$c-ternary;
+}
+
+.attribution {
+	text-align: center;
+	line-height: 1.5;
 }

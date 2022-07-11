@@ -1,34 +1,20 @@
-
 // 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins';
+@use 'abstracts/variables';
 
 // 2. Vendors
-@import
-  'vendors/normalize';
+@use 'vendors/normalize';
 
 // 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+@use 'base/base';
+@use 'base/typography';
 
 // 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
+@use 'layout/grid';
 
 // 5. Components
-@import
-  'components/button';
+@use 'components/toggle-switch';
+@use 'components/social-card';
+@use 'components/overview-card';
 
 // 6. Page-specific styles
-@import
-  'pages/home';
-
-// 7. Themes
-@import
-  'themes/default';
+@use 'pages/home';

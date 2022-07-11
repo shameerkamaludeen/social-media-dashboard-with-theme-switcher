@@ -1,6 +1,55 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass variables.
-// -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+   || Abstracts - Variables
+   ========================================================================== */
 
-// colors
+@use 'sass:map';
 
+// commmon colors
+
+//socials
+$c-facebook: hsl(208, 92%, 53%);
+$c-twitter: hsl(203, 89%, 53%);
+$c-youtube: hsl(348, 97%, 39%);
+// it is for a background property
+$bc-instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$c-instagram: hsl(37, 97%, 70%);
+
+$c-neutral: hsl(163, 72%, 41%);
+$c-ternary: hsl(356, 69%, 56%);
+$bc-toggle-hover: linear-gradient(to right, hsl(210, 78%, 56%) 50%, hsl(146, 68%, 55%));
+
+// theme light
+body.theme-light {
+	--bc-primary: hsl(0, 0%, 100%);
+	--bc-secondary: hsl(225, 100%, 98%);
+	--bc-neutral: hsl(227, 47%, 96%);
+	--bc-neutral-dark: hsl(227, 47%, 85%);
+	--c-primary: hsl(230, 17%, 14%);
+	--c-secondary: hsl(228, 12%, 44%);
+}
+
+// theme dark
+body.theme-dark {
+	--bc-primary: hsl(230, 17%, 14%);
+	--bc-secondary: hsl(232, 19%, 15%);
+	--bc-neutral: hsl(228, 28%, 20%);
+	--bc-neutral-dark: hsl(228, 28%, 25%);
+	--c-primary: hsl(0, 0%, 100%);
+	--c-secondary: hsl(228, 34%, 66%);
+}
+
+// theme based colors
+$bc-primary: var(--bc-primary); //body background
+$bc-secondary: var(--bc-secondary); // background pattern
+$bc-neutral: var(--bc-neutral); // card bg
+$bc-neutral-dark: var(--bc-neutral-dark);
+$c-primary: var(--c-primary); // main text
+$c-secondary: var(--c-secondary); // sub text
+
+// viewports
+
+$mobile-view-portrait: 27.5em;
+$mobile-view-landscape: 37em;
+$tablet-view: 53em;
+$laptop-view: 71em;
+$desktop-view-: 37em;

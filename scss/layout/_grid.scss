@@ -1,0 +1,25 @@
+/* -----------------------------------------------------------------------------
+   || Layout - Grid
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+
+.fixed-centered {
+	max-width: 327px;
+
+	@media screen and (min-width: var.$mobile-view-portrait) {
+		max-width: 400px;
+	}
+
+	@media screen and (min-width: var.$mobile-view-landscape) {
+		max-width: 542px;
+	}
+
+	@media screen and (min-width: var.$tablet-view) {
+		max-width: 828px;
+	}
+
+	@media screen and (min-width: var.$laptop-view) {
+		max-width: 1114px;
+	}
+}
