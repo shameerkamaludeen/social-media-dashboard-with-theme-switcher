@@ -1,87 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="This is a practice project for an office design agency using one of the templates of Nice Page taken as a prototype.">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<title>Frontend Mentor | [Challenge Name Here]</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="styles/main.css">
+
+	<script src="scripts/main.js" defer></script>
 </head>
-<body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+<body class="theme-light">
+	<main>
+		<article>
+			<div class="block-background"></div>
 
-  Dark Mode
+			<!-- Block heading and mode change control -->
+			<div class="block-header h-centered fixed-centered">
+				<div class="header">
+					<h1 class="heading">Social Media Dashboard</h1>
+					<p class="tag">Total Followers: 23,004</p>
+				</div>
 
-  
+				<hr>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+				<div class="theme-mode flex-vc-hsb">
+					<label for="theme-mode-label" class="theme-mode-label">Dark Mode</label>
+					<input type="checkbox" name="theme-mode" id="theme-mode" class="toggle-switch">
+				</div>
+			</div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+			<!-- Social media card wrapper -->
+			<div class="social-wr h-centered fixed-centered">
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+				<!-- Social media card component -->
+				<div class="social-card facebook">
+					<div class="social-card-container">
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+						<div class="profile flex-vh-center">
+							<div class="img-wrapper social-icon">
+								<img src="images/icon-facebook.svg" alt="Facebook Icon">
+							</div>
+							<h3>@nathanf</h3>
+						</div>
 
+						<span class="followers block-element">1987</span>
 
+						<span class="followers-label block-element">Followers</span><br>
 
-  Overview - Today
+						<span class="days block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 12 Today</span>
+					</div>
+				</div>
 
-  Page Views
-  87
-  3%
+				<!-- Social media card component -->
+				<div class="social-card twitter block-element">
+					<div class="social-card-container">
 
-  Likes
-  52
-  2%
+						<div class="profile flex-vh-center">
+							<div class="img-wrapper social-icon">
+								<img src="images/icon-twitter.svg" alt="Twitter Icon">
+							</div>
+							<h3>@nathanf</h3>
+						</div>
 
-  Likes
-  5462
-  2257%
+						<span class="followers block-element">1044</span>
 
-  Profile Views
-  52k
-  1375%
+						<span class="followers-label block-element">Followers</span><br>
 
-  Retweets
-  117
-  303%
+						<span class="days block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 99 Today</span>
+					</div>
+				</div>
 
-  Likes
-  507
-  553%
+				<!-- Social media card component -->
+				<div class="social-card instagram block-element">
+					<div class="social-card-container">
 
-  Likes
-  107
-  19%
+						<div class="profile flex-vh-center">
+							<div class="img-wrapper social-icon">
+								<img src="images/icon-instagram.svg" alt="Instagram Icon">
+							</div>
+							<h3>@realnathanf</h3>
+						</div>
 
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+						<span class="followers block-element">11k</span>
+
+						<span class="followers-label block-element">Followers</span><br>
+
+						<span class="days block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 1099 Today</span>
+					</div>
+				</div>
+
+				<!-- Social media card component -->
+				<div class="social-card youtube block-element">
+					<div class="social-card-container">
+
+						<div class="profile flex-vh-center">
+							<div class="img-wrapper social-icon">
+								<img src="images/icon-youtube.svg" alt="Youtube Icon">
+							</div>
+							<h3>Nathan F.</h3>
+						</div>
+
+						<span class="followers block-element">8239</span>
+
+						<span class="followers-label block-element">Subscribers</span><br>
+
+						<span class="days block-element down"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z" />
+							</svg> 144 Today</span>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- || Section overview -->
+			<section class="sec-overview h-centered fixed-centered">
+				<h2 class="heading">Overview - Today</h2>
+
+				<!-- Overview card container -->
+				<div class="overview-card-wr">
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Page Views</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-facebook.svg" alt="Facebook Icon">
+						</div>
+						<span class="count block-element">87</span>
+						<span class="change block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 3%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Likes</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-facebook.svg" alt="Facebook Icon">
+						</div>
+						<span class="count block-element">52</span>
+						<span class="change block-element down"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z" />
+							</svg> 2%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Likes</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-instagram.svg" alt="Instagram Icon">
+						</div>
+						<span class="count block-element">5462</span>
+						<span class="change block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 2257%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Profile Views</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-instagram.svg" alt="Instagram Icon">
+						</div>
+						<span class="count block-element">52k</span>
+						<span class="change block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 1375%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Retweets</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-twitter.svg" alt="Twitter Icon">
+						</div>
+						<span class="count block-element">117</span>
+						<span class="change block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 303%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Likes</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-twitter.svg" alt="Twitter Icon">
+						</div>
+						<span class="count block-element">507</span>
+						<span class="change block-element up"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z" />
+							</svg> 553%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Likes</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-youtube.svg" alt="Youtube Icon">
+						</div>
+						<span class="count block-element">107</span>
+						<span class="change block-element down"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z" />
+							</svg> 19%</span>
+					</div>
+
+					<!-- overview card item -->
+					<div class="overview-card">
+						<span class="name block-element">Total Views</span>
+						<div class="img-wrapper social-icon">
+							<img src="images/icon-youtube.svg" alt="Youtube Icon">
+						</div>
+						<span class="count block-element">1407</span>
+						<span class="change block-element down"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
+								<path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z" />
+							</svg> 12%</span>
+					</div>
+
+				</div>
+
+			</section>
+
+		</article>
+	</main>
+
+	<!-- Remove: Validate HTML structure -->
+	<!-- Remove: read blog about theme change after html complete -->
+	<footer>
+
+		<div class="attribution-container h-centered fixed-centered">
+			<p class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+				<a href="https://twitter.com/ShameerKamalud1" target="_blank">Shameer Kamaludeen</a>.
+			</p>
+		</div>
+
+	</footer>
+
 </body>
+
 </html>

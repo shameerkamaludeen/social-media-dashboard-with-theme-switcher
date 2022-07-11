@@ -1,0 +1,72 @@
+/* -----------------------------------------------------------------------------
+   || Components - Social card
+   ========================================================================== */
+
+@use '../abstracts/variables' as var;
+
+@mixin card-top-bar ($color) {
+	border-top: 4px solid $color;
+}
+
+/**
+ * card wrapper
+ */
+.social-card {
+	border-radius: 5px;
+	background-color: var.$bc-neutral;
+	cursor: pointer;
+	text-align: center;
+
+	.social-card-container {
+		padding: 17px 0 24px;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var.$bc-neutral-dark;
+	}
+
+	/**
+   * Top border
+   */
+	&.facebook {
+		@include card-top-bar(var.$c-facebook);
+	}
+
+	&.twitter {
+		@include card-top-bar(var.$c-twitter);
+	}
+
+	/**
+   * Implementing gradient border, border-image property does not work on 
+   *  radius so using multiple background to achieve.
+   */
+	&.instagram {
+		@include card-top-bar(transparent);
+		background-image: linear-gradient(var.$bc-neutral, var.$bc-neutral),
+			var.$bc-instagram;
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+
+		&:hover {
+			background-image: linear-gradient(var.$bc-neutral-dark, var.$bc-neutral-dark),
+				var.$bc-instagram;
+		}
+	}
+
+	&.youtube {
+		@include card-top-bar(var.$c-youtube);
+	}
+
+	.social-icon {
+		margin-right: 8px;
+	}
+
+	.followers {
+		margin-top: 0.15em;
+	}
+
+	.days {
+		margin-top: 1.3em;
+	}
+}

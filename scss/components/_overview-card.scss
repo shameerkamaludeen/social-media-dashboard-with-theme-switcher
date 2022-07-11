@@ -1,0 +1,32 @@
+/* -----------------------------------------------------------------------------
+   || Components - Overview card
+   ========================================================================== */
+@use '../abstracts/variables' as var;
+
+.overview-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 23px;
+	background-color: var.$bc-neutral;
+	border-radius: 5px;
+	padding: 28px 30px 19px 24px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var.$bc-neutral-dark;
+	}
+
+	.social-icon {
+		text-align: right;
+	}
+
+	.name {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.change {
+		margin-left: auto;
+		margin-top: auto;
+	}
+}
